@@ -18,6 +18,7 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
+      <button class="btn">I'm a button</button>
     </div>
   </section>
 </template>
@@ -32,23 +33,30 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
-/* Sample `apply` at-rules with Tailwind CSS
+/* Sample `apply` at-rules with Tailwind CSS*/
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
-*/
+
+.btn {
+  @apply bg-grey-light rounded-sm text-black p-2;
+
+  &:hover {
+    @apply bg-grey;
+  }
+}
 
 
-.container {
+
+/*.container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: auto;
-}
+}*/
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
