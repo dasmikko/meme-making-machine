@@ -1,11 +1,13 @@
 <template>
   <div>
     <nuxt/>
+    <div class="logo fixed pin-b text-grey text-3xl">Meme Making Machine</div>
   </div>
 </template>
 
 <style>
 html {
+  @apply bg-grey-lighter;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;

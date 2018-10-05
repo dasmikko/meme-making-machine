@@ -1,34 +1,30 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        meme-making-machine
-      </h1>
-      <h2 class="subtitle">
-        A damn fine meme making machine
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-      <button class="btn">I'm a button</button>
-    </div>
-  </section>
+    <section class="container">
+      <Card title="Select an image" width="w-64">
+
+        <div class="upload-field cursor-pointer select-none" @click="$router.push('/editor')">
+          <span class="text-grey">
+            drop a file here <br>
+            or <br>
+            click here
+          </span>
+        </div>
+      </Card>
+    </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import TopBar from '~/components/TopBar/TopBar.vue'
+import Button from '~/components/Button.vue'
+import Card from '../components/Card.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    TopBar,
+    Button,
+    Card
   }
 }
 </script>
@@ -48,15 +44,10 @@ export default {
   }
 }
 
+.upload-field {
+  @apply bg-blue-lightest rounded border-2 border-dashed border-blue-lighter py-10;
+}
 
-
-/*.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}*/
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
