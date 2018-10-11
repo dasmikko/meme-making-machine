@@ -1,7 +1,7 @@
 <template>
     <section class="container">
       <Card>
-        Edit the image here...
+        Edit the image <here class="."></here>
       </Card>
     </section>
 </template>
